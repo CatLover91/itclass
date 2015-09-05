@@ -1,0 +1,14 @@
+body{
+  background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/06/galaxy-wallpapers-10.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+}
+.header-splash-cont {
+  text-align:center;
+}
+.card .card-image .card-title {
+  font-weight:700;
+}
