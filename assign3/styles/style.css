@@ -3,12 +3,6 @@ body {
   background-repeat:no-repeat;
   background-size:cover;
 }
-h1 {
+.card-title {
   font-family: 'Lobster', cursive;
-}
-.header-splash-cont {
-  text-align:center;
-}
-.card .card-image .card-title {
-  font-weight:700;
 }
