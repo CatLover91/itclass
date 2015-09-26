@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IT325 homework website</title>
+    <meta name="viewport">
+    <meta charset="UTF-8">
+
+    <!-- Personal Styles and Scripts for the page -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jquery is needed for personal scripts and materialize -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Materialize CSS to provide CSS framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <!-- Fonts to be used by page, Lobster for header and CTA, and roboto is provided by materialize for body -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="col s10 offset-s1">
+        <div class="header-splash-cont white-text">
+          <h1>Feedback</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s10 offset-s1">
+        <div class="card">
+          <div class="card-content">
+            Tell us what you think
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="name" type="text" class="validate">
+                <label for="name">Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="With password entry field" id="email" type="password" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <div class="input-field row">
+                  <textarea id="comment" placeholder="I auto resize based upon the size of your comment!" class="materialize-textarea"></textarea>
+                  <label for="comment">Comments</label>
+                </div>
+                <div class="input-field row">
+                  Rate our site
+                  <select id="rate" class="browser-default">
+                    <option value="10">10</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-field col s3">
+                Things you liked:
+                <form action="#">
+                  <p>
+                    <input type="checkbox" id="design" />
+                    <label for="design">Design</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" id="links" checked="checked" />
+                    <label for="links">Links</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" id="usabil" />
+                    <label for="usabil">Usability</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" id="imgs" />
+                    <label for="imgs">Images</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" id="srccode" />
+                    <label for="srccode">code</label>
+                  </p>
+              </div>
+              <div class="input-field col s3">
+                How did you get to our site?
+                <form action="#">
+                  <p>
+                    <input name="site-discovery" type="radio" id="search-eng" />
+                    <label for="search-eng">Search Engine</label>
+                  </p>
+                  <p>
+                    <input name="site-discovery" type="radio" id="ext-link" />
+                    <label for="ext-link">External Link</label>
+                  </p>
+                  <p>
+                    <input name="site-discovery" type="radio" id="deitel" checked />
+                    <label for="deitel">Deitel.com</label>
+                  </p>
+                  <p>
+                    <input name="site-discovery" type="radio" id="ext-ref"  />
+                    <label for="ext-ref">From a book</label>
+                  </p>
+                    <p>
+                      <input name="site-discovery" type="radio" id="other" />
+                      <label for="other">Other</label>
+                  </p>
+                </form>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <a class="waves-effect waves-light amber btn">Submit</a>
+              </div>
+              <div class="col s6">
+                <a class="waves-effect waves-light amber btn">Clear</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a target="_blank" href="../index.html">Go back to Assignment 4.</a>
+            <a target="_blank" href="../../index.html">Go back to main page.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
