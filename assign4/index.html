@@ -36,166 +36,82 @@
               Tables of Glory
             </div>
             <div class="row">
-              <div class="col s4">
-                <div class="small-table">
-                  <div class="row">
-                    <div class="col s6">
-                      1
-                    </div>
-                    <div class="col s4">
-                      2 and 3
-                    </div>
-                    <div class="col s2">
-                      4
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col s6">
-                      5, 9 and 13
-                    </div>
-                    <div class="col s6">
-                      <div class="row">
-                        <div class="col s4">
-                          6
-                        </div>
-                        <div class="col s4">
-                          7
-                        </div>
-                        <div class="col s4">
-                          8
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col s4">
-                          10
-                        </div>
-                        <div class="col s4">
-                          11
-                        </div>
-                        <div class="col s4">
-                          12
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col s12">
-                          14, 15 and 16
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12">
-                <div class="large-table">
-                  <div class="row">
-                    <div class="col s2">
-                      Outer Table
-                    </div>
-                    <div class="col s10">
-                      <div class="row">
-                        <div class="col s12">
-                          An inner table showing a variety of headings and data items.
-                        </div>
-                        <div class="col s12">
-                          <div class="row">
-                            <div class="col s12">
-                              Inner Table
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col s4">
-                              <div class="row">
-                                <div class="col s12">
-                                  CORNER
-                                </div>
-                                <div class="col s8">
-                                  Head4
-                                </div>
-                                <div class="col s4">
-                                  Head5
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col s8">
-                              <div class="row">
-                                <div class="col s12">
-                                  Head1
-                                </div>
-                                <div class="col s8">
-                                  Head2
-                                </div>
-                                <div class="col s4">
-                                  <div class="row">
-                                    <div class="col s12">
-                                      Head3
-                                    </div>
-                                    <div class="col s6">
-                                      Head6
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col s4">
-                              <div class="row">
-                                <div class="col s8">
-                                  <div class="row">
-                                    <div class="col s12">
-                                      a
-                                    </div>
-                                    <div class="col s12">
-                                      HTML Station
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col s4">
-                                  Two Tall
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col s8">
-                              <div class="row">
-                                <div class="col s8">
-                                  LIST
-                                  LISt
-                                </div>
-                                <div class="col s4">
-                                  Two Wide
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col s8">
-                                  cell
-                                </div>
-                                <div class="col s2">
-                                  no border little table
-                                </div>
-                                <div class="col s2">
-                                  multiple line item
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="col s10 offset-s1">
+                <table class="striped">
+                  <tr>
+                    <td colspan="3">1</td>
+                    <td colspan="2">2 and 3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" rowspan="3">5, 9 and 13</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">14, 15 and 16</td>
+                  </tr>
+                </table>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content">
             <div class="row">
-              <div class="col s4">
-                <h3>Image Map</h3>
+              <div class="col s12">
+                <table>
+                  <tr>
+                    <td>Outer Table</td>
+                    <td>
+                      An inner table showing a variety of headings and data items
+                      <table class="striped">
+                        <tr>
+                          <td colspan="6">Inner Table</td>
+                        <tr>
+                        <tr>
+                          <td colspan="2" rowspan="2">CORNER</td>
+                          <td colspan="4">Head1</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="2">Head2</td>
+                          <td colspan="2">Head3</td>
+                        </tr>
+                        <tr>
+                          <td>Head4</td>
+                          <td>Head5</td>
+                          <td>Head6</td>
+                        </tr>
+                        <tr>
+                          <td>A</td>
+                          <td rowspan="2">Two Tall</td>
+                          <td>
+                            <ul>
+                              <li>⬤ Lists can be table data</li>
+                              <li>⬤ Images can be table data</li>
+                            </ul>
+                          </td>
+                          <td colspan="2">Two Wide</td>
+                        </tr>
+                        <tr>
+                          <td>HTML Station</td>
+                          <td>cell</td>
+                          <td>No border Little Table<td>
+                          <td>
+                            Multiple</br>
+                            line</br>
+                            item
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
               </div>
-              <div class="col s8">
+            </div>
+            <div class="row">
               <img src="./shapes.jpg" width="375" height="102" usemap="#shapemap">
               <map name="shapemap">
                 <area shape="circle" coords="59,51,41" href="http://circle.com" alt="circle">
@@ -203,13 +119,6 @@
                 <area shape="poly" coords="310,10,362,92,258,92" href="http://triangle.com" alt="triangle">
               </map>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content">
-            Check out these links!
           </div>
           <div class="card-action">
             <a target="_blank" href="./feedback/index.html">Go to the feedback page.</a>
