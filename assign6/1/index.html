@@ -5,10 +5,6 @@
     <meta name="viewport">
     <meta charset="UTF-8">
 
-    <!-- Personal Styles and Scripts for the page -->
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js"></script>
-
     <!-- jquery is needed for personal scripts and materialize -->
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -36,19 +32,38 @@
   </head>
   <body>
     <div class="header-splash-cont white-text">
-      <h1>Image scroll</h1>
+      <h1>Image Slideshow</h1>
     </div>
     <div class="main-page-cont">
       <div class="row">
         <div class="col s12">
           <div class="card">
             <div class="card-content">
-
+              <div>
+                <img height="200" name="slide" src="http://www.medhatspca.ca/sites/default/files/news_photos/2014-Apr-15/node-147/cute-little-cat.jpg" width="400" />
+              </div>
               <a class="amber-text" href="../index.html">Go back to the assignment page</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script>
+    var i = 0;
+    var path = [];
+
+    // LIST OF IMAGES
+    path[0] = "http://www.medhatspca.ca/sites/default/files/news_photos/2014-Apr-15/node-147/cute-little-cat.jpg";
+    path[1] = "http://www.cats.org.uk/uploads/branches/211/5507692-cat-m.jpg";
+    path[2] = "http://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg";
+
+    function swapImage()
+    {
+       document.slide.src = path[i];
+       if(i < path.length - 1) i++; else i = 0;
+       setTimeout("swapImage()",3000);
+    }
+    window.onload=swapImage;
+    </script>
   </body>
 </html>

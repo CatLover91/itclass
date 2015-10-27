@@ -5,10 +5,6 @@
     <meta name="viewport">
     <meta charset="UTF-8">
 
-    <!-- Personal Styles and Scripts for the page -->
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js"></script>
-
     <!-- jquery is needed for personal scripts and materialize -->
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -35,6 +31,16 @@
       .btn {
         margin:1em;
       }
+      .a-block {
+        width:200px;
+        height:200px;
+        margin: 1em;
+        background-color:red;
+
+      }
+      .swap {
+        background-color:blue;
+      }
     </style>
   </head>
   <body>
@@ -47,6 +53,7 @@
           <div class="card">
             <div class="card-content">
               <div>Watch the button change colors!</div>
+              <div class="a-block"></div>
               <div><a class="waves-effect waves-light btn amber">Click me!</a></div>
               <div><a class="amber-text" href="../index.html">Go back to the assignment page</a></div>
             </div>
@@ -54,5 +61,10 @@
         </div>
       </div>
     </div>
+    <script>
+      $( ".btn" ).click(function() {
+        $( ".a-block" ).toggleClass( "swap" );
+      });
+    </script>
   </body>
 </html>
