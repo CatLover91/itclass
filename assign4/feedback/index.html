@@ -35,16 +35,21 @@
             Tell us what you think
             <div class="row">
               <div class="input-field col s6">
-                <input id="name" type="text" class="validate">
-                <label for="name">Name</label>
+                <form>
+                  <input id="name" type="text" class="validate">
+                  <label for="name">Name</label>
+                </form>
               </div>
               <div class="input-field col s6">
-                  <input id="email" type="email" class="validate">
-                  <label for="email" data-error="wrong" data-success="right">Email</label>
+                <form>
+                  <input id="email" type="email">
+                  <label for="email">Email</label>
+                </form>
               </div>
             </div>
             <div class="row">
               <div class="col s6">
+                <form>
                 <div class="input-field row">
                   <textarea id="comment" placeholder="I auto resize based upon the size of your comment!" class="materialize-textarea"></textarea>
                   <label for="comment">Comments</label>
@@ -64,10 +69,11 @@
                     <option value="1">1</option>
                   </select>
                 </div>
+                </form>
               </div>
               <div class="input-field col s3">
                 Things you liked:
-                <form action="#">
+                <form id="likes" action="#">
                   <p>
                     <input type="checkbox" id="design" />
                     <label for="design">Design</label>
@@ -118,10 +124,10 @@
             </div>
             <div class="row">
               <div class="col s6">
-                <a class="waves-effect waves-light amber btn">Submit</a>
+                <a id="submit" class="waves-effect waves-light amber btn">Submit</a>
               </div>
               <div class="col s6">
-                <a class="waves-effect waves-light amber btn">Clear</a>
+                <a id="clear" class="waves-effect waves-light amber btn">Clear</a>
               </div>
             </div>
           </div>
@@ -132,5 +138,37 @@
         </div>
       </div>
     </div>
+    <script>
+    $('#clear').click(function(){
+        $(':input','form')
+            .not(':button, :submit, :reset, :hidden')
+            .val('')
+            .removeAttr('checked')
+            .removeAttr('selected');
+    });
+    function validateEmail(email) {
+        // regex is from http://stackoverflow.com/a/46181/11236
+
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    $('#submit').click(function(){
+        if($('#name').val() === '') {
+            alert('Please enter your name.');
+        } else if(!validateEmail($('#email').val())) {
+            alert('Please enter a valid email.');
+        } else if($('#comment').val() === '') {
+            alert('Please enter a comment.');
+        } else if($('#rate').val() === null) {
+            alert('Please rate our site.');
+        } else if($('input:checked').length === 1) {
+            alert('If you did not like anything about my website, please select something you would consider the best so I at least know where to focus.');
+        } else {
+            alert('The form is fully validated!');
+        }
+
+    });
+    </script>
   </body>
 </html>
