@@ -5,7 +5,7 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-error_log(print_r($_POST,true));
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
