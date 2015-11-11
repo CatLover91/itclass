@@ -60,7 +60,7 @@
                     array_push($bookData, $linearr);
                   }
 
-                  for ($row = 0; $row < 4; $row++) {
+                  for ($row = 0; $row < count($bookData); $row++) {
                   ?>
                   <tr>
                     <td><? echo $row; ?></td>
