@@ -8,17 +8,17 @@ function test_input($data) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
-    echo "<script type='text/javascript'>alert('$nameErr');</script>";
+    echo $nameErr;
   } else {
     $name = test_input($_POST["name"]);
     if (empty($_POST["email"])) {
       $emailErr = "Email is required";
-      echo "<script type='text/javascript'>alert('$emailErr');</script>";
+      echo $emailErr;
     } else {
       $email = test_input($_POST["email"]);
       if (empty($_POST["comment"])) {
         $commentErr = "Comment is required";
-        echo "<script type='text/javascript'>alert('$commentErr');</script>";
+        echo $commentErr;
       } else {
         $comment = test_input($_POST["comment"]);
         $myFile = fopen("guestbook.txt", "a");
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         fwrite($myFile, $userInput);
 
-        echo "<script type='text/javascript'>alert('View guestbook');</script>";
+        echo "<a href=\"viewguestbook.php\" class=\"amber-text\">View Guestbook</a>";
       }
 
       fclose($myfile);
