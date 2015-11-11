@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<a href=\"viewguestbook.php\" class=\"amber-text\">View Guestbook</a>";
       }
 
-      fclose($myfile);
+      fclose($myFile);
     }
   }
 }
