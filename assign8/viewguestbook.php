@@ -74,7 +74,7 @@
                   fclose(); //close database
                   ?>
                 </tbody>
-              </table
+              </table>
               <a href="./index.html">Sign Guestbook</a>
             </div>
           </div>
