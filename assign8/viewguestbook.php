@@ -52,10 +52,12 @@
                 </thead>
                 <tbody>
                   <?php
-                  $myFile = fopen("./guestbook.txt", "a") or die("Nobody has signed it yet!");
+                  $myFile = fopen("guestbook.txt", "a") or die("Nobody has signed it yet!");
                   $bookData = [];
                   while(!feof($myFile)) {
-                    array_push($bookData, explode("~", fgets($myFile)));
+                    $linestr = fgets($myFile);
+                    $linearr = explode("~", $linestr);
+                    array_push($bookData, $linearr);
                   }
 
                   for ($row = 0; $row < 4; $row++) {
