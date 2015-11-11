@@ -27,8 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $datetime = date("y-m-d h:i:s");
 
         $userInput = $name."~".$email."~".$comment."~".$dateTime;
-        echo $myFile;
-        echo $userInput;
         fwrite($myFile, $userInput);
 
         echo "<a href=\"viewguestbook.php\" class=\"amber-text\">View Guestbook</a>";
