@@ -56,6 +56,7 @@
                   $bookData = [];
                   while(!feof($myFile)) {
                     $linestr = fgets($myFile);
+                    echo $linestr;
                     $linearr = explode("~", $linestr);
                     echo $linestr;
                     array_push($bookData, $linearr);
