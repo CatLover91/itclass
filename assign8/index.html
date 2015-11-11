@@ -42,22 +42,28 @@
           <div class="card">
             <div class="card-content">
               <form class="col s12" method="post" action="addguestbook.php">
-                    <input id="name-entry" type="text" class="validate">
+                <div class="row" style="margin-bottom:5rem;">
+                  <div class="input-field col s6">
+                    <input id="name" name="name" type="text" class="validate">
                     <label for="name-entry" data-error="Please input your name.">Name</label>
-
-                    <input id="email-entry" type="email" class="validate">
-                    <label for="email-entry" data-error="Please input your email.">Email</label>
-
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="email" name="email" type="email" class="validate">
+                    <label for="email" data-error="Please input your email.">Email</label>
+                  </div>
+                  <div class="input-field col s12">
                     <textarea name="comment" class="materialize-textarea validate" id="comment"></textarea>
                     <label for="comment">Comment</label>
-
+                  </div>
+                  <div class="input-field col s6">
                     <input id="submit" type="submit" name="Submit" value="Submit" style="display:none;"/>
                     <label for="submit" class="waves-effect waves-light amber white-text btn" style="cursor:pointer;">Submit</label>
-
+                  </div>
+                  <div class="input-field col s6">
                     <input id="reset" type="reset" name="reset" value="Reset" style="display:none;"/>
                     <label for="reset" class="waves-effect waves-light white-text amber btn" style="cursor:pointer;">Reset</label>
-
-                
+                  </div>
+                </div>
               </form>
                 <a href="viewguestbook.php" class="amber-text">View Guestbook</a>
                 </br>
