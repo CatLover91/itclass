@@ -52,7 +52,7 @@
                 </thead>
                 <tbody>
                   <?php
-                  $myFile = fopen("guestbook.txt", "a") or die("Nobody has signed it yet!");
+                  $myFile = fopen("./guestbook.txt", "a") or die("Nobody has signed it yet!");
                   $bookData = [];
                   while(!feof($myFile)) {
                     array_push($bookData, explode("~", fgets($myFile)));

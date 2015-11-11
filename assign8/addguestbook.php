@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo $commentErr;
       } else {
         $comment = test_input($_POST["comment"]);
-        $myFile = fopen("guestbook.txt", "a");
+        $myFile = fopen("./guestbook.txt", "a");
 
         $datetime = date("y-m-d h:i:s");
 
