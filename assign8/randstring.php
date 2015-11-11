@@ -12,5 +12,5 @@ function randStrGen($len){
 
 // Usage example
 $randstr = randStrGen(30);
-echo "<script type='text/javascript'>alert('$randstr');</script>";
+echo 'password: '.$randstr;
 ?>

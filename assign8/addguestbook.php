@@ -30,10 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         fwrite($myFile, $userInput);
 
         echo "<script type='text/javascript'>alert('View guestbook');</script>";
-        }
-
-        fclose($myfile);
       }
+
+      fclose($myfile);
     }
   }
 }
