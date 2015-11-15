@@ -65,10 +65,29 @@
                       echo $commentErr;
                     } else {
                       $comment = test_input($_POST["comment"]);
-                      $myFile = fopen("guestbook.txt", "a") or die("fopen did not work");
+                      if (empty($_POST["rating"])) {
+                        $commentErr = "Rating is required";
+                        echo $ratingErr;
+                      } else {
+                        $rating = test_input($_POST["rating"]);
+                        if (empty($_POST["likes"])) {
+                          $likesErr = "Likes are required (weird, I know)";
+                          echo $likesErr;
+                        } else {
+                          $likes = test_input($_POST["likes"]);
+                          if (empty($_POST["how"])) {
+                            $howErr = "Tell us how you got here!";
+                            echo $howErr;
+                          } else {
+                            $how = test_input($_POST["how"]);
 
-                      $userInput = $name."~".$email."~".$comment;
-                      fwrite($myFile, $userInput);
+                            $myFile = fopen("guestbook.txt", "a") or die("fopen did not work");
+
+                            $userInput = $name."~".$email."~".$comment;
+                            fwrite($myFile, $userInput);
+                          }
+                        }
+                      }
                     }
 
                     fclose($myFile);
