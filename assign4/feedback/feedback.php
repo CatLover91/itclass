@@ -66,7 +66,7 @@
                     } else {
                       $comment = test_input($_POST["comment"]);
                       if (empty($_POST["rating"])) {
-                        $commentErr = "Rating is required";
+                        $ratingErr = "Rating is required";
                         echo $ratingErr;
                       } else {
                         $rating = test_input($_POST["rating"]);
@@ -83,7 +83,7 @@
 
                             $myFile = fopen("guestbook.txt", "a") or die("fopen did not work");
 
-                            $userInput = $name."~".$email."~".$comment;
+                            $userInput = $name."~".$email."~".$comment."~".$rating."~".$likes."~".$how;
                             fwrite($myFile, $userInput);
                           }
                         }
