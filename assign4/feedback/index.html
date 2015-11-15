@@ -31,32 +31,27 @@
     <div class="row">
       <div class="col s10 offset-s1">
         <div class="card">
-          <div class="card-content">
+          <form class="card-content" method="post" action="feedback.php">
             Tell us what you think
             <div class="row">
               <div class="input-field col s6">
-                <form>
-                  <input id="name" type="text" class="validate">
-                  <label for="name">Name</label>
-                </form>
+                <input id="name" name="name" type="text" class="validate">
+                <label for="name">Name</label>
               </div>
               <div class="input-field col s6">
-                <form>
-                  <input id="email" type="email">
-                  <label for="email">Email</label>
-                </form>
+                <input id="email" name="email" type="email">
+                <label for="email">Email</label>
               </div>
             </div>
             <div class="row">
               <div class="col s6">
-                <form>
                 <div class="input-field row">
-                  <textarea id="comment" placeholder="I auto resize based upon the size of your comment!" class="materialize-textarea"></textarea>
+                  <textarea name="comment" id="comment" placeholder="I auto resize based upon the size of your comment!" class="materialize-textarea"></textarea>
                   <label for="comment">Comments</label>
                 </div>
                 <div class="input-field row">
                   Rate our site
-                  <select id="rate" class="browser-default">
+                  <select name="rating" id="rate" class="browser-default">
                     <option value="10">10</option>
                     <option value="9">9</option>
                     <option value="8">8</option>
@@ -69,68 +64,66 @@
                     <option value="1">1</option>
                   </select>
                 </div>
-                </form>
               </div>
               <div class="input-field col s3">
                 Things you liked:
-                <form id="likes" action="#">
+                <div id="likes">
                   <p>
-                    <input type="checkbox" id="design" />
+                    <input name="likes" value="design" type="checkbox" id="design" />
                     <label for="design">Design</label>
                   </p>
                   <p>
-                    <input type="checkbox" id="links" checked="checked" />
+                    <input name="likes" value="links" type="checkbox" id="links" checked="checked" />
                     <label for="links">Links</label>
                   </p>
                   <p>
-                    <input type="checkbox" id="usabil" />
+                    <input name="likes" value="usability" type="checkbox" id="usabil" />
                     <label for="usabil">Usability</label>
                   </p>
                   <p>
-                    <input type="checkbox" id="imgs" />
+                    <input name="likes" value="images" type="checkbox" id="imgs" />
                     <label for="imgs">Images</label>
                   </p>
                   <p>
-                    <input type="checkbox" id="srccode" />
+                    <input name="likes" value="code" type="checkbox" id="srccode" />
                     <label for="srccode">code</label>
                   </p>
               </div>
               <div class="input-field col s3">
                 How did you get to our site?
-                <form action="#">
-                  <p>
-                    <input name="site-discovery" type="radio" id="search-eng" />
-                    <label for="search-eng">Search Engine</label>
-                  </p>
-                  <p>
-                    <input name="site-discovery" type="radio" id="ext-link" />
-                    <label for="ext-link">External Link</label>
-                  </p>
-                  <p>
-                    <input name="site-discovery" type="radio" id="deitel" checked />
-                    <label for="deitel">Deitel.com</label>
-                  </p>
-                  <p>
-                    <input name="site-discovery" type="radio" id="ext-ref"  />
-                    <label for="ext-ref">From a book</label>
-                  </p>
-                    <p>
-                      <input name="site-discovery" type="radio" id="other" />
-                      <label for="other">Other</label>
-                  </p>
-                </form>
+                <p>
+                  <input name="how" value="search" type="radio" id="search-eng" />
+                  <label for="search-eng">Search Engine</label>
+                </p>
+                <p>
+                  <input name="how" value="link" type="radio" id="ext-link" />
+                  <label for="ext-link">External Link</label>
+                </p>
+                <p>
+                  <input name="how" value="deitel" type="radio" id="deitel" checked />
+                  <label for="deitel">Deitel.com</label>
+                </p>
+                <p>
+                  <input name="how" value="book" type="radio" id="ext-ref"  />
+                  <label for="ext-ref">From a book</label>
+                </p>
+                <p>
+                  <input name="how" value="other" type="radio" id="other" />
+                  <label for="other">Other</label>
+                </p>
               </div>
-
             </div>
             <div class="row">
-              <div class="col s6">
-                <a id="submit" class="waves-effect waves-light amber btn">Submit</a>
+              <div class="input-field col s6">
+                <input id="submit" type="submit" name="Submit" value="Submit" style="display:none;"/>
+                <label for="submit" class="waves-effect waves-light amber white-text btn" style="cursor:pointer;">Submit</label>
               </div>
-              <div class="col s6">
-                <a id="clear" class="waves-effect waves-light amber btn">Clear</a>
+              <div class="input-field col s6">
+                <input id="reset" type="reset" name="reset" value="Reset" style="display:none;"/>
+                <label for="reset" class="waves-effect waves-light white-text amber btn" style="cursor:pointer;">Reset</label>
               </div>
             </div>
-          </div>
+          </form>
           <div class="card-action">
             <a target="_blank" href="../index.html">Go back to Assignment 4.</a>
             <a target="_blank" href="../../index.html">Go back to main page.</a>
