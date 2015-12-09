@@ -67,6 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       echo "Message sent! <a href=\"../\" class=\"amber-text\">Go back to home page.</a>";
                     }
                   }
+                }
               }
             }
           }
