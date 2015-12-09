@@ -60,10 +60,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     } else {
                       $comment = test_input($_POST["comment"]);
 
+                      ini_set("SMTP", "aspmx.l.google.com");
+                      ini_set("sendmail_from", "kranoscorp@gmail.com");
+                      $headers = "From: kranoscorp@gmail.com";
+
                       $title = "Message from IT325 Website";
-                      $message = $name." ".$lastname."\n".$street."\n".$city.", ".$state." ".$zip."\n".$country." - ".$phone."\n".$comment;
+                      $message = $email."\n".$name." ".$lastname."\n".$street."\n".$city.", ".$state." ".$zip."\n".$country." - ".$phone."\n".$comment;
 
                       mail($email, $title, $message);
+                      mail("kranoscorp@gmail.com", $title, $message, $headers);
                       echo "Message sent! <a href=\"../\" class=\"amber-text\">Go back to home page.</a>";
                     }
                   }
